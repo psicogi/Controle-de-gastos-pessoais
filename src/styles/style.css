@@ -36,9 +36,88 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.container {
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 30px;
+}
+
+.card {
+    background-color: #1b5b65;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+}
+
+.card.receitas {
+    background-color: #3d82c7;
+}
+
+.card.despesas {
+    background-color: #ea5e51;
+}
+
+.card.orcamento {
+    background-color: #43b29c;
+    position: relative;
+}
+
+.barra {
+    background-color: white;
+    height: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.preenchimento {
+    height: 100%;
+    background-color: #1b5b65;
+    width: 70%;
+}
+
+.grafico-legenda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legenda span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.legenda span::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legenda .alimentacao::before {
+    background-color: #1b5b65;
+}
+
+.legenda .transporte::before {
+    background-color: #3d82c7;
+}
+
+.legenda .lazer::before {
+    background-color: #ea5e51;
 }
